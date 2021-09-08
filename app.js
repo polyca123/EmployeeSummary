@@ -1,6 +1,6 @@
 const Manager = require("./lib/Manager.js")
-const Engineer = require("./lib/Engineerjs")
-const Intern = require("./lib/Internjs")
+const Engineer = require("./lib/Engineer.js")
+const Intern = require("./lib/Intern.js")
 const { prompt } = require("inquirer")
 const path = require("path")
 const { writeFile } = require("fs")
@@ -8,7 +8,7 @@ const { writeFile } = require("fs")
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html")
 
-const render = require("./lib/htmlRendererjs")
+const render = require("./lib/htmlRenderer.js")
 
 const team = []
 
@@ -30,8 +30,8 @@ const makeEngineer = ({ name, id, email }) => {
     name: 'GitHub Username',
     message: 'What is their GitHub Username?'
   })
-    .then(({ gitHub }) => {
-      team.push(new Engineer(name, id, email, gitHub))
+    .then(({ github }) => {
+      team.push(new Engineer(name, id, email, github))
       menu()
     })
 }

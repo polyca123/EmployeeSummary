@@ -1,15 +1,15 @@
 const Engineer = require('../lib/Engineer.js')
 
 test('Can set GitHub account via', () => {
-  const gitHubUser = 'GitHubUser'
-  const engineer = new Engineer('Foo', 1, 'test@test.com', gitHubUser)
-  expect(engineer.gitHub).toBe(gitHubUser)
+  const github = 'GithubUser'
+  const engineer = new Engineer('Foo', 1, 'test@test.com', github)
+  expect(engineer.github).toBe(github)
 })
 
 test('Can get GitHub username via getGithub()', () => {
-  const getGitHub = 'GitHubUser'
-  const engineer = new Engineer('Foo', 1, 'test@test.com', getGitHub)
-  expect(engineer.getGitHub()).toBe(getGitHub)
+  const getGithub = 'GitHubUser'
+  const engineer = new Engineer('Foo', 1, 'test@test.com', getGithub)
+  expect(engineer.getGithub()).toBe(getGithub)
 })
 
 test('getRole() should return "Engineer"', () => {
